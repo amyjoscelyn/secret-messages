@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Empty Fields View Controller-->
+        <scene sceneID="bt9-YA-nUj">
+            <objects>
+                <viewController id="ezI-WT-ecB" customClass="AMYEmptyFieldsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OvV-Kg-vqr"/>
+                        <viewControllerLayoutGuide type="bottom" id="63v-M8-QBO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fzb-jU-kW7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3FY-1v-IDr">
+                                <rect key="frame" x="217" y="74" width="167" height="182"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Message Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wM9-jq-aLr">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="167" id="t3K-zn-Oam"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="firstMessageTextFieldValueChanged:" destination="ezI-WT-ecB" eventType="valueChanged" id="BuS-PC-KJ7"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second Message Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dDo-Tg-wi7">
+                                        <rect key="frame" x="0.0" y="38" width="167" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="secondMessageTextFieldValueChanged:" destination="ezI-WT-ecB" eventType="valueChanged" id="n35-bO-hey"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Emoji" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9j-H9-dUt">
+                                        <rect key="frame" x="0.0" y="76" width="167" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="firstEmojiTextFieldValueChanged:" destination="ezI-WT-ecB" eventType="valueChanged" id="zQk-9n-Ssr"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second Emoji" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jim-yi-0K1">
+                                        <rect key="frame" x="0.0" y="114" width="167" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="secondEmojiTextFieldValueChanged:" destination="ezI-WT-ecB" eventType="valueChanged" id="B7N-YL-VcY"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Third Emoji" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qcI-Un-BFQ">
+                                        <rect key="frame" x="0.0" y="152" width="167" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="thirdEmojiTextFieldValueChanged:" destination="ezI-WT-ecB" eventType="valueChanged" id="82D-Fc-KO9"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ey7-Vt-zZR">
+                                <rect key="frame" x="235.5" y="465" width="129" height="30"/>
+                                <state key="normal" title="Save and Continue"/>
+                                <connections>
+                                    <action selector="showMessageButtonTapped:" destination="ezI-WT-ecB" eventType="touchUpInside" id="An3-on-mbt"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Xk3-A0-2eg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3FY-1v-IDr" firstAttribute="centerX" secondItem="fzb-jU-kW7" secondAttribute="centerX" id="Aea-86-eON"/>
+                            <constraint firstItem="63v-M8-QBO" firstAttribute="top" secondItem="ey7-Vt-zZR" secondAttribute="bottom" constant="105" id="D96-py-5zT"/>
+                            <constraint firstItem="ey7-Vt-zZR" firstAttribute="centerX" secondItem="fzb-jU-kW7" secondAttribute="centerX" id="Hn5-dP-Djj"/>
+                            <constraint firstItem="3FY-1v-IDr" firstAttribute="top" secondItem="OvV-Kg-vqr" secondAttribute="bottom" constant="54" id="fkL-9z-X0l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emoji1TextField" destination="M9j-H9-dUt" id="SZx-H7-7zy"/>
+                        <outlet property="emoji2TextField" destination="Jim-yi-0K1" id="E4J-9m-Edz"/>
+                        <outlet property="emoji3TextField" destination="qcI-Un-BFQ" id="FKD-83-KUe"/>
+                        <outlet property="firstMessageTextField" destination="wM9-jq-aLr" id="MRL-Hf-yc8"/>
+                        <outlet property="secondMessageTextField" destination="dDo-Tg-wi7" id="ANW-Ou-Lvh"/>
+                        <outlet property="showMessageButton" destination="ey7-Vt-zZR" id="nmI-qq-oxv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rAc-f9-HAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-525" y="327"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J99-6D-vJM">
+                                <rect key="frame" x="79" y="225" width="442" height="150"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="115"/>
+                                <state key="normal" title="Hi, Mark!"/>
+                                <connections>
+                                    <action selector="firstMessageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yli-JO-mzH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brw-Wy-n1X">
+                                <rect key="frame" x="279" y="289" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GPZ-Yt-OZV">
+                                <rect key="frame" x="227" y="462" width="146" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WY0-2N-gmM">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68q-t6-ebL">
+                                        <rect key="frame" x="52" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCD-Aw-03N">
+                                        <rect key="frame" x="104" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GPZ-Yt-OZV" firstAttribute="top" secondItem="brw-Wy-n1X" secondAttribute="bottom" constant="152" id="657-n4-FQq"/>
+                            <constraint firstItem="GPZ-Yt-OZV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hzm-dQ-nBb"/>
+                            <constraint firstItem="J99-6D-vJM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NcN-qk-m0A"/>
+                            <constraint firstItem="brw-Wy-n1X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gRr-en-RAw"/>
+                            <constraint firstItem="J99-6D-vJM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hnR-5G-Dop"/>
+                            <constraint firstItem="brw-Wy-n1X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wh1-mw-W34"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emojiLabel1" destination="WY0-2N-gmM" id="zGo-jM-k3n"/>
+                        <outlet property="emojiLabel2" destination="68q-t6-ebL" id="GR5-zU-iAW"/>
+                        <outlet property="emojiLabel3" destination="xCD-Aw-03N" id="hzL-Fh-r7S"/>
+                        <outlet property="firstMessageButton" destination="J99-6D-vJM" id="r3O-Rt-rs1"/>
+                        <outlet property="secondMessageLabel" destination="brw-Wy-n1X" id="aWS-tf-zrX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
